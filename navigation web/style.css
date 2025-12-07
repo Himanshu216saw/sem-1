@@ -1,0 +1,48 @@
+body {
+    font-family: "Times New Roman", serif;
+}
+
+.box {
+    width: 90%;
+    border: 2px solid #000;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+.header {
+    background: #d9d9d9;
+    padding: 10px;
+    text-align: center;
+}
+
+.header span {
+    color: red;
+}
+
+.nav-section {
+    margin: 15px 0;
+}
+
+.nav {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 5px;
+    border: 1px solid #6c6c6c;
+    text-decoration: none;
+    color: blue;
+    font-size: 16px;
+    
+}
+
+.blue {
+    background: #cde2ff;
+}
+
+.green {
+    background: #b7f8b7;
+}
+
+.nav:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
