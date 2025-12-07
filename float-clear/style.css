@@ -1,0 +1,22 @@
+body {
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.img {
+    float: left;
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+}
+
+.footer {
+    clear: both;
+    background-color: lightgray;
+    padding: 5px;
+}
