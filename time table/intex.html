@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>College Timetable - CSE Department</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f7f7f7;
+        padding:20px;
+    }
+    table{
+        width:900px;
+        margin:auto;
+        border-collapse:collapse;
+        background:#fff;
+    }
+    th, td{
+        border:1px solid #000;
+        padding:8px;
+        text-align:center;
+        font-size:14px;
+    }
+    th{
+        font-weight:bold;
+    }
+</style>
+</head>
+<body>
+
+<table>
+    <!-- Title row inside table -->
+    <tr>
+        <th colspan="8">College Timetable - CSE Department</th>
+    </tr>
+
+    <!-- Time header -->
+    <tr>
+        <th>Day / Time</th>
+        <th>9:00 - 10:00</th>
+        <th>10:00 - 11:00</th>
+        <th>11:00 - 12:00</th>
+        <th>12:00 - 1:00</th>
+        <th>1:00 - 2:00</th>
+        <th>2:00 - 3:00</th>
+        <th>3:00 - 4:00</th>
+    </tr>
+
+    <!-- Monday -->
+    <tr>
+        <td>Monday</td>
+        <td>Mathematics</td>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>Break</td>
+        <td>Computer Lab</td>
+        <td>&nbsp;</td>
+        <td>Sports</td>
+    </tr>
+
+    <!-- Tuesday -->
+    <tr>
+        <td>Tuesday</td>
+        <td>&nbsp;</td>
+        <td>C Programming</td>
+        <td>&nbsp;</td>
+        <td>Break</td>
+        <td>Electronics Lab</td>
+        <td>&nbsp;</td>
+        <td>Library</td>
+    </tr>
+
+    <!-- Wednesday -->
+    <tr>
+        <td>Wednesday</td>
+        <td>Mathematics</td>
+        <td>English</td>
+        <td>Physics</td>
+        <td>Break</td>
+        <td>Computer Networks</td>
+
+        <!-- Lab Details block: spans Wed & Thu, 2:00–4:00 -->
+        <td rowspan="2" colspan="2">
+            <table style="border-collapse:collapse; width:100%;">
+                <tr>
+                    <th colspan="2">Lab Details</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #000;">Batch A</td>
+                    <td style="border:1px solid #000;">DBMS Lab</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #000;">Batch B</td>
+                    <td style="border:1px solid #000;">OS Lab</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- Thursday -->
+    <tr>
+        <td>Thursday</td>
+        <td>Workshop</td>
+        <td>&nbsp;</td>
+        <td>Physics</td>
+        <td>Break</td>
+        <td>Mathematics</td>
+        <!-- last two cells are covered by rowspan above -->
+    </tr>
+
+    <!-- Friday -->
+    <tr>
+        <td>Friday</td>
+        <td>Computer Networks</td>
+        <td>English</td>
+        <td>Physics</td>
+        <td>Break</td>
+        <td colspan="3">Project Work</td>
+    </tr>
+
+</table>
+
+</body>
+</html>
