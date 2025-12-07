@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: pink;
     font-family: Arial, sans-serif;
     padding: 20px;
@@ -19,4 +19,25 @@ h2 {
     clear: both;
     background-color: lightgray;
     padding: 5px;
+} */
+
+
+
+
+
+.container {
+    display: flex;                 
+    flex-direction: row;           
+    justify-content: space-around; 
+    align-items: center;           
+    height: 200px;                 
+    border: 2px solid black;    
+}
+
+.item {
+    background: lightblue;      
+    padding: 20px;                 
+    margin: 5px;                   
+    font-size: 18px;
+    font-weight: bold;
 }
