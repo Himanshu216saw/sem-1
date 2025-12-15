@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox Student Profile</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center; 
+        align-items: center;        
+        background: #f0f2f5;
+        font-family: Arial, sans-serif;
+    }
+
+    .profile-container {
+        display: flex;
+        flex-direction: row;             /* Horizontal alignment */
+        justify-content: space-between;  /* Space between text and image */
+        align-items: center;             /* Vertical align center */
+        width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .profile-container div:first-child {
+        display: flex;
+        flex-direction: column;          /* Stack text vertically */
+        gap: 6px;                        /* Some space between lines */
+    }
+
+    .profile-container img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: 3px solid #333;
+        object-fit: cover;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="profile-container">
+
+        <!-- TEXT PART – no .left class used -->
+        <div>
+            <h2>Himanshu Kumar</h2>
+            <p><b>Class:</b> 12th</p>
+            <p><b>Roll No:</b> 25</p>
+            <p><b>Department:</b> Science</p>
+            <p><b>School:</b> Sunrise Public School</p>
+        </div>
+
+        <!-- IMAGE -->
+        <img src="https://via.placeholder.com/140" alt="Student Photo">
+
+    </div>
+
+</body>
+</html>

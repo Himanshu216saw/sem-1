@@ -1,4 +1,4 @@
-.box{
+/* .box{
     height: 100px;
     width: 100%;
     background-color: green
@@ -13,4 +13,54 @@
         background-color: red;
     
 }
+} */
+ body{
+    marigin : 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+
+
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: black
+    padding: 10px 20px;
 }
+
+.menu{
+    display: none;
+    list-style: column;
+    flex-direction: column;
+    background: ;
+}   
+
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    padding: 1em
+}
+
+.hamburger{
+    font-size: 2e;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: none;
+    width: auto;
+}
+
+.hamburger{
+    display: none;
+
+}
+ }
