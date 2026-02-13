@@ -2,123 +2,142 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>College Timetable - CSE Department</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-commerce Navbar</title>
+
 <style>
-    body{
-        font-family: Arial, sans-serif;
-        background:#f7f7f7;
-        padding:20px;
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#131921;
+    color:white;
+}
+
+/* Logo */
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#f08804;
+}
+
+/* Menu */
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.nav-links li a:hover{
+    color:#f08804;
+}
+
+/* Search Bar */
+.search-box{
+    display:flex;
+    flex:1;
+    margin:0 30px;
+}
+
+.search-box input{
+    width:100%;
+    padding:8px;
+    border:none;
+    outline:none;
+}
+
+.search-box button{
+    padding:8px 15px;
+    border:none;
+    background:#febd69;
+    cursor:pointer;
+}
+
+/* Cart */
+.cart{
+    font-size:18px;
+}
+
+/* Hamburger */
+.menu-toggle{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .search-box{
+        display:none;
     }
-    table{
-        width:900px;
-        margin:auto;
-        border-collapse:collapse;
-        background:#fff;
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#232f3e;
+        flex-direction:column;
+        align-items:center;
+        display:none;
+        padding:20px 0;
     }
-    th, td{
-        border:1px solid #000;
-        padding:8px;
-        text-align:center;
-        font-size:14px;
+
+    .nav-links.active{
+        display:flex;
     }
-    th{
-        font-weight:bold;
+
+    .menu-toggle{
+        display:block;
     }
+}
 </style>
 </head>
+
 <body>
 
-<table>
-    <!-- Title row inside table -->
-    <tr>
-        <th colspan="8">College Timetable - CSE Department</th>
-    </tr>
+<nav class="navbar">
+    <div class="logo">ShopKart</div>
 
-    <!-- Time header -->
-    <tr>
-        <th>Day / Time</th>
-        <th>9:00 - 10:00</th>
-        <th>10:00 - 11:00</th>
-        <th>11:00 - 12:00</th>
-        <th>12:00 - 1:00</th>
-        <th>1:00 - 2:00</th>
-        <th>2:00 - 3:00</th>
-        <th>3:00 - 4:00</th>
-    </tr>
+    <div class="search-box">
+        <input type="text" placeholder="Search products...">
+        <button>Search</button>
+    </div>
 
-    <!-- Monday -->
-    <tr>
-        <td>Monday</td>
-        <td>Mathematics</td>
-        <td>English</td>
-        <td>&nbsp;</td>
-        <td>Break</td>
-        <td>Computer Lab</td>
-        <td>&nbsp;</td>
-        <td>Sports</td>
-    </tr>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 
-    <!-- Tuesday -->
-    <tr>
-        <td>Tuesday</td>
-        <td>&nbsp;</td>
-        <td>C Programming</td>
-        <td>&nbsp;</td>
-        <td>Break</td>
-        <td>Electronics Lab</td>
-        <td>&nbsp;</td>
-        <td>Library</td>
-    </tr>
+    <div class="cart">🛒</div>
 
-    <!-- Wednesday -->
-    <tr>
-        <td>Wednesday</td>
-        <td>Mathematics</td>
-        <td>English</td>
-        <td>Physics</td>
-        <td>Break</td>
-        <td>Computer Networks</td>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</nav>
 
-        <!-- Lab Details block: spans Wed & Thu, 2:00–4:00 -->
-        <td rowspan="2" colspan="2">
-            <table style="border-collapse:collapse; width:100%;">
-                <tr>
-                    <th colspan="2">Lab Details</th>
-                </tr>
-                <tr>
-                    <td style="border:1px solid #000;">Batch A</td>
-                    <td style="border:1px solid #000;">DBMS Lab</td>
-                </tr>
-                <tr>
-                    <td style="border:1px solid #000;">Batch B</td>
-                    <td style="border:1px solid #000;">OS Lab</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-
-    <!-- Thursday -->
-    <tr>
-        <td>Thursday</td>
-        <td>Workshop</td>
-        <td>&nbsp;</td>
-        <td>Physics</td>
-        <td>Break</td>
-        <td>Mathematics</td>
-        <!-- last two cells are covered by rowspan above -->
-    </tr>
-
-    <!-- Friday -->
-    <tr>
-        <td>Friday</td>
-        <td>Computer Networks</td>
-        <td>English</td>
-        <td>Physics</td>
-        <td>Break</td>
-        <td colspan="3">Project Work</td>
-    </tr>
-
-</table>
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
